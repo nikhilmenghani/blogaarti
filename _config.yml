@@ -30,7 +30,8 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 sass:
-  sass_dir: assets/css
+  sass_dir: _sass
+  style: compressed
 
 collections:
   poems:

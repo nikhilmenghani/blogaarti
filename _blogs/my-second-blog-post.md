@@ -1,5 +1,5 @@
 ---
-layout: default  # This refers to a layout named 'post.html' in your '_layouts' directory.
+layout: post  # This refers to a layout named 'post.html' in your '_layouts' directory.
 title: "My Second Blog Post"
 date: 2023-10-14
 categories: blogs
