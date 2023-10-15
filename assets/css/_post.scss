@@ -1,60 +1,80 @@
-/* General blog list styling */
-.blog-list {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    padding: 20px 0;
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
 }
 
+/* Grid system for blog cards */
+section.blog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Blog Card Styles */
 article {
-    background-color: #f9f9f9;
+    background-color: #f5f5f5;
     padding: 20px;
-    margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 8px;
-    position: relative; /* This makes it the parent for absolutely positioned children */
+    position: relative;
+    flex-basis: calc(33.3333% - 20px); 
+    margin: 10px; 
+    transition: transform 0.2s;
+    padding-bottom: 60px; /* Space for the floating button */
+}
+
+article:hover {
+    transform: scale(1.05);
 }
 
 article h2 {
-    margin-top: 0;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 10px;
-    padding-bottom: 10px; 
-    border-bottom: 2px solid #0077cc; 
+    border-bottom: 2px solid #0077CC;
+    padding-bottom: 10px;
 }
 
-/* Styling for Title Link */
 article h2 a {
     color: #333;
-    text-decoration: none; 
+    text-decoration: none;
+    transition: color 0.2s;
 }
 
 article h2 a:hover {
-    color: #0077cc;
-    text-decoration: underline; 
+    color: #0077CC;
 }
 
-/* Styling for the Content */
 article p {
-    margin-top: 10px;
-    margin-bottom: 40px; /* Make space for the absolutely positioned Read More button */
-    color: #666;
+    margin-bottom: 10px;
 }
 
-/* Styling for "Read More" Button */
-article a:not(.title-link) {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #0077cc;
-    color: #fff;
+/* Separated styles for the "Read More" button */
+article .read-more-btn {
     text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-    position: absolute; /* Make it float */
-    bottom: 10px; /* Offset from the bottom of the card */
-    right: 20px; /* Offset from the right of the card */
+    background-color: #0077CC;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    transition: background-color 0.2s;
 }
 
-article a:not(.title-link):hover {
-    background-color: #005fa3;
+article .read-more-btn:hover {
+    background-color: #0055a3;
+}
+
+/* Responsive styles */
+@media (max-width: 1000px) {
+    article {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 700px) {
+    article {
+        flex-basis: 100%;
+    }
 }
