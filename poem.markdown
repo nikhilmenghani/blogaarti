@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Poem
-permalink: /poem
+permalink: /poems
 ---
 
 This is a poem page

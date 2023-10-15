@@ -1,8 +1,8 @@
 <nav>
     <div class="ui inverted menu custom-menu">
-        <a class="item {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
-        <a class="item {% if page.url contains '/about' %}active{% endif %}" href="{{ '/about' | relative_url }}">About</a>
+        <a class="item {% if page.url == '/home' or page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
         <a class="item {% if page.url contains '/blog' %}active{% endif %}" href="{{ '/blog' | relative_url }}">Blog</a>
+        <a class="item {% if page.url contains '/poems' %}active{% endif %}" href="{{ '/poems' | relative_url }}">Poems</a>
         <a class="item {% if page.url contains '/contact' %}active{% endif %}" href="{{ '/contact' | relative_url }}">Contact</a>
     </div>
 </nav>
