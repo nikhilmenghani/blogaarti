@@ -1,37 +1,45 @@
-/* _footer.scss */
-
 .footer {
-    background-color: #2c3e50; // Dark blue color
-    color: #ecf0f1; // Light grayish-white text color
-    padding: 40px 0;
-    text-align: center;
-    font-size: 16px;
+    background-color: #2c3e50; // Dark blue background
 
-    a {
-        color: #3498db; // Bright blue link color
-        text-decoration: none;
-        transition: color 0.3s;
+    .container {
+        display: flex;
+        justify-content: space-between; // Space out content and social links
+        align-items: center; // Vertically center items
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 15px 20px; // Adjust as needed for desired height
+    }
 
-        &:hover {
-            color: #ecf0f1; // Light grayish-white on hover
-        }
+    // Styling for footer text
+    .footer-copy {
+        color: #ecf0f1; // Off-white text
+        font-weight: 500;
+        flex: 1; // Ensure the text occupies the available space and stays centered
+        margin: 0; // Remove any default margins
+        text-align: center; // Center-align text
     }
 
     .footer-social {
-        margin: 20px 0;
+        display: flex;
+        align-items: center; // Vertically center icons
 
-        i { // Assuming you're using icons (like FontAwesome)
-            font-size: 24px;
+        a {
             margin: 0 10px;
-            transition: color 0.3s;
 
-            &:hover {
-                color: #3498db; // Bright blue on hover
+            i.icon {
+                font-size: 24px;
+                color: #ecf0f1; // Off-white to match the menu items
+            
+                &:hover {
+                    color: #fff; // Pure white on hover for a slight contrast
+                }
             }
         }
     }
+}
 
-    .footer-copy {
-        font-size: 14px;
-    }
+.fab {
+    font-size: 1.25rem;  /* adjust as needed */
+    margin-right: 10px;  /* space between icons */
+    color: #ecf0f1;      /* color matching your theme */
 }

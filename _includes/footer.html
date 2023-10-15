@@ -1,13 +1,19 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-social">
-            <a href="#" class="ui icon"><i class="facebook square icon"></i></a>
-            <a href="#" class="ui icon"><i class="twitter square icon"></i></a>
-            <a href="#" class="ui icon"><i class="linkedin square icon"></i></a>
-            <a href="#" class="ui icon"><i class="instagram square icon"></i></a>
-        </div>        
-        <div class="footer-copy">
-            &copy; {{ site.time | date: '%Y' }} Aarti's Blog. All rights reserved.
-        </div>
+            {% if site.data.social.facebook %}
+                <a href="{{ site.data.social.facebook }}"><i class="fab fa-facebook-f"></i></a>
+            {% endif %}
+            {% if site.data.social.twitter %}
+                <a href="{{ site.data.social.twitter }}"><i class="fab fa-twitter"></i></a>
+            {% endif %}
+            {% if site.data.social.linkedin %}
+                <a href="{{ site.data.social.linkedin }}"><i class="fab fa-linkedin-in"></i></a>
+            {% endif %}
+            {% if site.data.social.instagram %}
+                <a href="{{ site.data.social.instagram }}"><i class="fab fa-instagram"></i></a>
+            {% endif %}
+        </div>             
+        <p class="footer-copy">© 2023 Aarti's Blog. All rights reserved</p>
     </div>
 </footer>
