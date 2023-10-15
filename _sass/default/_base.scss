@@ -1,0 +1,60 @@
+// Variables
+$primary-color: #2c3e50;
+$secondary-color: #ecf0f1;
+$tertiary-color: #34495e;
+$background-color: #f4f6f6; // This is a light grayish background that should blend well with the dark blue
+
+// Typography
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: $primary-color; // Dark text on a light background
+    line-height: 1.5;
+    background-color: $background-color;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $tertiary-color;
+}
+
+// Portfolio Styles
+.portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+}
+
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 2em;
+
+    .portfolio-item {
+        flex: 0 1 calc(33.333% - 1em); // Three items per row
+        background-color: $secondary-color;
+        padding: 2em;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        h2 {
+            margin-top: 0.5em;
+            color: $primary-color;
+        }
+
+        p {
+            color: $primary-color;
+        }
+    }
+}
+
+// Responsive Breakpoints
+@media (max-width: 768px) {
+    .portfolio-items .portfolio-item {
+        flex: 1 0 100%; // One item per row on smaller screens
+    }
+}

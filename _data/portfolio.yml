@@ -1,0 +1,7 @@
+- title: Project A
+  image: /path/to/imageA.jpg
+  description: This is a brief description of Project A.
+
+- title: Project B
+  image: /path/to/imageB.jpg
+  description: This is a brief description of Project B.
