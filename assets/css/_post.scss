@@ -1,0 +1,60 @@
+/* General blog list styling */
+.blog-list {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    padding: 20px 0;
+}
+
+article {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    position: relative; /* This makes it the parent for absolutely positioned children */
+}
+
+article h2 {
+    margin-top: 0;
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding-bottom: 10px; 
+    border-bottom: 2px solid #0077cc; 
+}
+
+/* Styling for Title Link */
+article h2 a {
+    color: #333;
+    text-decoration: none; 
+}
+
+article h2 a:hover {
+    color: #0077cc;
+    text-decoration: underline; 
+}
+
+/* Styling for the Content */
+article p {
+    margin-top: 10px;
+    margin-bottom: 40px; /* Make space for the absolutely positioned Read More button */
+    color: #666;
+}
+
+/* Styling for "Read More" Button */
+article a:not(.title-link) {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #0077cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    position: absolute; /* Make it float */
+    bottom: 10px; /* Offset from the bottom of the card */
+    right: 20px; /* Offset from the right of the card */
+}
+
+article a:not(.title-link):hover {
+    background-color: #005fa3;
+}

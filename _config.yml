@@ -32,6 +32,14 @@ github_username:  jekyll
 sass:
   sass_dir: assets/css
 
+collections:
+  poems:
+    output: true
+  blogs:
+    output: true
+
+permalink: /:categories/:title/
+
 # Build settings
 # theme: minima
 # plugins:
