@@ -3,7 +3,7 @@ layout: post
 title: "Sunsets"
 date: 2023-10-24
 categories: blogs
-excerpt: Sunsets are one of many things that nature provide us to signal us to wrap up our work, finish meals and just enjoy and rest with family and sleep.
+excerpt: Sunsets are one of the many things that nature provide us to signal us to wrap up our work, finish meals and just enjoy and rest with family and sleep.
 ---
 
 # Sunsets
