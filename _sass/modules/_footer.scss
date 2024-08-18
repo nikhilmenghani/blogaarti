@@ -1,37 +1,60 @@
+/* Ensure html and body take up the full height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body must be a flex container */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Content must expand to fill the available space */
+.content {
+    flex: 1;
+    padding-bottom: 20px; /* Optional: space to ensure content doesn't overlap with the footer */
+}
+
+/* Footer styling */
 .footer {
-    background-color: #2c3e50; // Dark blue background
+    background-color: #2c3e50; /* Dark blue background */
+    width: 100%;
+    padding: 15px 20px; /* Adjust as needed */
+    margin-top: auto; /* This pushes the footer to the bottom when there's not enough content */
 
     .container {
         display: flex;
-        justify-content: space-between; // Space out content and social links
-        align-items: center; // Vertically center items
+        justify-content: space-between; /* Space out content and social links */
+        align-items: center; /* Vertically center items */
         max-width: 1200px;
         margin: 0 auto;
-        padding: 15px 20px; // Adjust as needed for desired height
     }
 
-    // Styling for footer text
+    /* Styling for footer text */
     .footer-copy {
-        color: #ecf0f1; // Off-white text
+        color: #ecf0f1; /* Off-white text */
         font-weight: 500;
-        flex: 1; // Ensure the text occupies the available space and stays centered
-        margin: 0; // Remove any default margins
-        text-align: center; // Center-align text
+        flex: 1; /* Ensure the text occupies the available space and stays centered */
+        margin: 0; /* Remove any default margins */
+        text-align: center; /* Center-align text */
     }
 
     .footer-social {
         display: flex;
-        align-items: center; // Vertically center icons
+        align-items: center; /* Vertically center icons */
 
         a {
             margin: 0 10px;
 
             i.icon {
                 font-size: 24px;
-                color: #ecf0f1; // Off-white to match the menu items
-            
+                color: #ecf0f1; /* Off-white to match the menu items */
+
                 &:hover {
-                    color: #fff; // Pure white on hover for a slight contrast
+                    color: #fff; /* Pure white on hover for a slight contrast */
                 }
             }
         }
@@ -39,7 +62,7 @@
 }
 
 .fab {
-    font-size: 1.25rem;  /* adjust as needed */
-    margin-right: 10px;  /* space between icons */
-    color: #ecf0f1;      /* color matching your theme */
+    font-size: 1.25rem;  /* Adjust as needed */
+    margin-right: 10px;  /* Space between icons */
+    color: #ecf0f1;      /* Color matching your theme */
 }
